@@ -1,0 +1,22 @@
+Python API Automation Framework
+Hybrid Custom API Automation Framework include the proper folder structure.
+
+https://private-user-images.githubusercontent.com/1409610/354955159-3c7d5fe5-207a-42e7-84fe-f4d53354d987.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mzc1MzYxNTksIm5iZiI6MTczNzUzNTg1OSwicGF0aCI6Ii8xNDA5NjEwLzM1NDk1NTE1OS0zYzdkNWZlNS0yMDdhLTQyZTctODRmZS1mNGQ1MzM1NGQ5ODcucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI1MDEyMiUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTAxMjJUMDg1MDU5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MmU3OWZlNzUzZjQzYmNhMDA3MDY5ZTdhYThjOGYwMGY2NjVlOWNiYzQ0MmI2M2M2MzU1Mzg5YWEwY2Q5NzgxZiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.5pt4lkKs3wg6XE7w44b7Q6bdrYiQzQNegm_4WRilLUw
+
+Tech Stack
+
+Python 3.13
+Requests - HTTP Requests
+PyTest - Testing Framework
+Reporting - Allure Report, PyTest HTML
+Test Data - CSV, Excel
+Parallel Execution - x distribute (xdist)
+Advance API Testcase - jsonschema
+How to Install Packages
+
+pip install requests pytest pytest-html faker allure-pytest jsonschema
+How to run your Testcase Parallel pip install pytest-xdist 
+
+How to run the Basic Test with Allure report
+
+ pytest tests/tests/crud/test_create_booking.py  --alluredir=allure_result -s
