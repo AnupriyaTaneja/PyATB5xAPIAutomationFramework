@@ -1,12 +1,9 @@
-'''
 # Reason : To reuse the Create Token and Create Booking.
 from src.constants.api_constants import APIConstants
 from src.helpers.api_requests_wrapper import *
 from src.helpers.common_verification import *
 from src.helpers.payload_manager import *
 from src.utils.utils import Utils
-
-
 
 import allure
 import pytest
@@ -21,9 +18,15 @@ def create_token():
         payload=payload_create_token(),
         in_json=False
     )
-    verify_http_status_code(response_data=response,expected_data=200)
-    verify_json_key_not_none(response.json()["token"])
-    return response.json()["token"]
+
+    print(response.status_code)
+#    print(response)
+    res_json = response.json()
+    print(res_json)
+
+    print(verify_http_status_code(response_data=response, expected_data=200))
+    print(verify_json_key_not_none(res_json["token"]))
+    return res_json["token"]
 
 
 @pytest.fixture(scope="session")
@@ -39,4 +42,3 @@ def get_booking_id():
     verify_http_status_code(response_data=response, expected_data=200)
     verify_json_key_not_null(booking_id)
     return booking_id
-'''

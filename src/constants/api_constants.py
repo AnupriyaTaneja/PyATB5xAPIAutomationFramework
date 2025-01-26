@@ -15,5 +15,6 @@ class APIConstants(object):
 
     # Booking -> HTTP -> put, patch, delete
     @staticmethod
+    #since this a static method, it can be called directly with class name without creating obj
     def url_patch_put_delete(booking_id):
         return "https://restful-booker.herokuapp.com/booking/" + str(booking_id)
